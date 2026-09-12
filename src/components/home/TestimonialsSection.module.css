@@ -1,0 +1,102 @@
+.guaranteeBox {
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.08) 0%, rgba(17, 24, 39, 0.95) 100%);
+  border: 1.5px solid rgba(16, 185, 129, 0.35);
+  border-radius: var(--radius-xl);
+  padding: 48px 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 30px rgba(16, 185, 129, 0.1);
+  margin: 32px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shieldIconWrapper {
+  width: 64px;
+  height: 64px;
+  background-color: var(--bg-dark-elevated);
+  border: 1.5px solid rgba(16, 185, 129, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+  margin-bottom: 20px;
+}
+
+.guaranteeTag {
+  font-size: 22px;
+  font-weight: 600;
+  color: #34D399;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.guaranteeMainText {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 28px;
+  max-width: 640px;
+  line-height: 1.4;
+}
+
+.conditionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 640px;
+  text-align: left;
+}
+
+.conditionItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--text-light);
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-dark);
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #34D399;
+}
+
+.closingText {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 24px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .guaranteeBox {
+    padding: 32px 20px;
+  }
+  .guaranteeTag {
+    font-size: 19px;
+  }
+  .guaranteeMainText {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+  .conditionItem {
+    font-size: 13.5px;
+    padding: 10px 14px;
+  }
+  .closingText {
+    font-size: 13px;
+  }
+}
+
+

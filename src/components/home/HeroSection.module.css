@@ -1,0 +1,411 @@
+.heroSection {
+  position: relative;
+  min-height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 0 48px;
+  overflow: hidden;
+  background-color: var(--bg-dark-base);
+}
+
+.glowSpotlight {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 450px;
+  background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.22) 0%, rgba(59, 130, 246, 0.08) 45%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.techPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  color: var(--text-light);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px 6px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 24px;
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.pillBadgeTag {
+  background: rgba(37, 99, 235, 0.25);
+  border: 1px solid rgba(147, 197, 253, 0.3);
+  color: var(--accent-blue-soft);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.3px;
+}
+
+.headline {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: var(--text-heading);
+  margin-bottom: 20px;
+  max-width: 900px;
+}
+
+
+.subheading {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--text-body);
+  margin-bottom: 32px;
+  max-width: 780px;
+}
+
+.ctaWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   SAAS PRODUCT CONSOLE WINDOW MOCKUP
+   ============================================ */
+.consoleWrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto 36px;
+}
+
+.consoleWindow {
+  background: rgba(13, 17, 26, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(37, 99, 235, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.consoleHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: rgba(17, 24, 39, 0.9);
+  border-bottom: 1px solid var(--border-dark);
+  gap: 12px;
+}
+
+.windowControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.dotRed,
+.dotYellow,
+.dotGreen {
+  background-color: #334155;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.urlBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(8, 11, 17, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.liveStatusBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #34D399;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.5px;
+}
+
+.consoleBody {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Telemetry Grid */
+.telemetryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.telemetryCard {
+  background: rgba(17, 24, 39, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--t-standard);
+}
+
+.telemetryCard:hover {
+  border-color: rgba(59, 130, 246, 0.35);
+  background: rgba(22, 31, 48, 0.75);
+  transform: translateY(-2px);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.iconBox {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badgeGreen {
+  font-size: 11px;
+  font-weight: 600;
+  color: #34D399;
+  background: rgba(16, 185, 129, 0.15);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.badgeBlue {
+  font-size: 11px;
+  font-weight: 600;
+  color: #93C5FD;
+  background: rgba(37, 99, 235, 0.18);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.badgeAmber {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94A3B8;
+  background: rgba(148, 163, 184, 0.12);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+
+.metricVal {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-heading);
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+
+.valSub {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.metricDesc {
+  font-size: 12.5px;
+  color: var(--text-body);
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.sparklineContainer {
+  margin-top: auto;
+  height: 36px;
+  width: 100%;
+}
+
+.sparklineSvg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.leadBar {
+  margin-top: auto;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.leadBarFill {
+  width: 88.4%;
+  height: 100%;
+  background: linear-gradient(90deg, #10B981, #34D399);
+  border-radius: var(--radius-full);
+}
+
+.speedPill {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #34D399;
+}
+
+/* Pipeline Footer Bar */
+.pipelineFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pipelineTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-blue-soft);
+}
+
+.pipelineSteps {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pipeStep {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.pipeDotActive {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #10B981;
+}
+
+.pipeArrow {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.scrollIndicator {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 860px) {
+  .headline {
+    font-size: 34px;
+    letter-spacing: -0.6px;
+  }
+  .telemetryGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .pipelineFooter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pipelineSteps {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .pipeArrow {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroSection {
+    padding: 48px 0 32px;
+  }
+  .headline {
+    font-size: 28px;
+  }
+  .subheading {
+    font-size: 16px;
+  }
+  .consoleHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .urlBar {
+    width: 100%;
+    justify-content: center;
+  }
+  .ctaWrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+
+

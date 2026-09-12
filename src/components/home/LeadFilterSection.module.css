@@ -1,0 +1,432 @@
+.section {
+  padding: var(--space-16) 0;
+  background: radial-gradient(circle at 50% 10%, rgba(30, 41, 59, 0.6) 0%, var(--bg-primary) 70%);
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.eyebrowWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  color: #ffffff;
+}
+
+.filterWrapper {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.filterCard {
+  background: var(--bg-card);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(245, 158, 11, 0.06);
+  padding: var(--space-10);
+  border-radius: var(--radius-2xl);
+}
+
+/* Steps Indicator */
+.stepsIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border-medium);
+}
+
+.stepIndicatorItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.45;
+  transition: opacity var(--t-base);
+}
+
+.stepActive {
+  opacity: 1;
+}
+
+.stepNum {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.stepActive .stepNum {
+  background: var(--gradient-gold);
+  color: #0F172A;
+}
+
+.stepLabel {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #F8FAFC;
+}
+
+.stepLine {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 var(--space-3);
+}
+
+/* Step Body */
+.stepBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.stepQuestion {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+/* Options Grid for Step 1 */
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-3);
+}
+
+.optionBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--t-fast);
+}
+
+.optionBtn:hover {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(245, 158, 11, 0.5);
+  transform: translateY(-2px);
+}
+
+.optionSelected {
+  background: rgba(245, 158, 11, 0.12) !important;
+  border-color: var(--gold-light) !important;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+}
+
+.optionIcon {
+  font-size: 1.5rem;
+}
+
+.optionText {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #F8FAFC;
+}
+
+/* Vertical Options for Step 2 & 3 */
+.verticalOptions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.verticalOptionBtn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--t-fast);
+}
+
+.verticalOptionBtn:hover {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+.radioCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.optionSelected .radioCircle {
+  border-color: var(--gold-light);
+}
+
+.radioDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold-light);
+}
+
+.verticalOptionText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.optionHeading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.optionDesc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+/* Action Row */
+.actionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+  gap: var(--space-3);
+}
+
+.hintText {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+/* Step 4: Result Elements */
+.qualifiedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: var(--sage-light);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.78125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  width: fit-content;
+}
+
+.resultTitle {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.resultDesc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.resultDesc strong {
+  color: #ffffff;
+}
+
+.personalizeBox {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.personalizeHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #F8FAFC;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputGroupFull {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputLabel {
+  font-size: 0.78125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.textInput {
+  background: rgba(3, 7, 18, 0.6);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 0.875rem;
+  color: #FFFFFF;
+  font-family: inherit;
+  outline: none;
+  transition: border-color var(--t-fast);
+}
+
+.textInput:focus {
+  border-color: var(--gold-light);
+}
+
+.scarcityBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 14px 16px;
+  border-radius: var(--radius-lg);
+}
+
+.scarcityIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.scarcityTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #FCA5A5;
+  margin-bottom: 2px;
+}
+
+.scarcityDesc {
+  font-size: 0.8125rem;
+  color: #E2E8F0;
+  line-height: 1.5;
+}
+
+.scarcityDesc strong {
+  color: #FFFFFF;
+}
+
+.ctaWaWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.btnDirectWa {
+  width: 100%;
+  justify-content: center;
+  padding: 15px 24px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
+}
+
+.btnDirectWa:hover {
+  background: linear-gradient(135deg, #34D399 0%, #10B981 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(16, 185, 129, 0.55);
+}
+
+.btnReset {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78125rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color var(--t-fast);
+}
+
+.btnReset:hover {
+  color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filterCard {
+    padding: var(--space-5);
+  }
+
+  .stepsIndicator {
+    overflow-x: auto;
+    padding-bottom: var(--space-4);
+  }
+
+  .stepLabel {
+    display: none;
+  }
+
+  .stepLine {
+    margin: 0 var(--space-2);
+  }
+
+  .optionsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .inputGroupFull {
+    grid-column: span 1;
+  }
+
+  .resultTitle {
+    font-size: 1.3rem;
+  }
+
+  .btnDirectWa {
+    font-size: 0.875rem;
+    padding: 13px 18px;
+    text-align: center;
+  }
+}
