@@ -17,7 +17,7 @@ export default function CaseStudyDetailPage({ caseStudy: cs }: Props) {
   const waMessage = encodeURIComponent(
     `Halo Tanscale, saya telah membaca studi kasus ${cs.clientName} (${cs.heroMetric} ${cs.heroMetricSub}) dan ingin konsultasi mengenai implementasi sistem serupa untuk travel saya.`
   );
-  const waUrl = `https://wa.me/6281234567890?text=${waMessage}`;
+  const waUrl = `https://wa.me/6288277450792?text=${waMessage}`;
 
   return (
     <>

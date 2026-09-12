@@ -142,26 +142,6 @@
   max-width: 520px;
 }
 
-.formGuarantees {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 24px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border-dark);
-  flex-wrap: wrap;
-}
-
-.guaranteeItem {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12.5px;
-  color: var(--text-light);
-  font-weight: 500;
-}
-
 
 .form {
   display: flex;
@@ -216,6 +196,7 @@
   font-size: 16px;
   font-weight: 600;
   color: #FFFFFF;
+  text-decoration: none;
   background: var(--btn-blue-gradient);
   border: 1px solid var(--btn-blue-border);
   border-radius: var(--radius-md);

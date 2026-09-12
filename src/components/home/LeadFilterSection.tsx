@@ -63,7 +63,7 @@ export default function LeadFilterSection() {
 
 Saya ingin mengklaim *Sesi Audit Strategi 45 Menit Gratis* dan mengecek ketersediaan slot batch bulan ini. Terima kasih!`;
 
-    return `https://wa.me/6281234567890?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/6288277450792?text=${encodeURIComponent(text)}`;
   };
 
   const resetForm = () => {

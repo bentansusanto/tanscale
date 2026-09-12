@@ -19,7 +19,7 @@ export default function CaseStudiesPage() {
   const waMessage = encodeURIComponent(
     "Halo Tanscale, saya telah melihat studi kasus klien dan ingin konsultasi mengenai implementasi scale-up untuk bisnis travel saya."
   );
-  const waUrl = `https://wa.me/6281234567890?text=${waMessage}`;
+  const waUrl = `https://wa.me/6288277450792?text=${waMessage}`;
 
   return (
     <>

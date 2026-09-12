@@ -7,36 +7,36 @@ import styles from "./FaqSection.module.css";
 
 const faqs = [
   {
-    q: "Kenapa fokus ke bikin Website + Meta Ads dan bukan hanya mengandalkan SEO?",
-    a: "SEO adalah strategi jangka panjang yang bagus, namun butuh waktu berbulan-bulan untuk naik peringkat di Google. Jika biro perjalanan Anda membutuhkan customer baru dan perputaran cashflow sekarang, Meta Ads langsung menyuntikkan traffic calon jamaah/wisatawan sejak hari pertama website Anda live.",
+    q: "Apakah saldo budget iklan sudah termasuk di dalam paket?",
+    a: "Belum. Biaya paket adalah untuk jasa pembuatan website atau audit & kelola iklan. Saldo budget iklan (minimal 1 juta - 1,5 juta) kamu bayar langsung ke Meta via kartu debit/kredit tanpa markup sepeserpun.",
   },
   {
-    q: "Apakah budget saldo iklan Meta Ads sudah termasuk di dalam paket Rp 6,5 Juta?",
-    a: "Investasi Rp 6,5 Juta adalah biaya all-in pembuatan Website Flagship lengkap, dan kami berikan jasa riset audiens, olah materi visual, serta setup kampanye Meta Ads secara 100% GRATIS. Untuk saldo budget iklan (misalnya Rp 50.000–Rp 100.000/hari), Anda membayarkannya langsung ke Meta melalui kartu debit/kredit bisnis Anda. Sistem ini 100% transparan tanpa markup atau potongan komisi.",
+    q: "Apa bedanya paket Rp 6,5 Juta dan Rp 3,5 Juta?",
+    a: "Paket Rp 6,5 Juta (sekali bayar) untuk kamu yang belum punya website atau ingin ganti website lama dengan yang baru, sudah gratis jasa setup iklan Meta. Paket Rp 3,5 Juta untuk kamu yang sudah punya website dan butuh audit alur serta pengelolaan iklan intensif selama 1 bulan.",
   },
   {
-    q: "Kenapa kuota pengerjaan dibatasi hanya 5 slot setiap bulan?",
-    a: "Karena kami tidak bekerja dengan template asal jadi. Tim kami meriset audiens spesifik rute kota Anda, memilah dokumentasi foto/video dari galeri Anda untuk dijadikan format iklan yang memikat, dan memantau performa iklan harian sampai closing pertama datang. Untuk menjaga fokus dan kualitas optimasi yang intensif, kami membatasi maksimal 5 klien travel agency per bulan.",
+    q: "Materi iklan apa saja yang perlu aku siapkan?",
+    a: "Cukup kirim foto dan video dokumentasi perjalanan atau suasana tour yang ada di galeri HP kamu. Aku yang akan filter, edit jadi materi iklan yang menarik, dan buatkan copywriting penawarannya.",
   },
   {
-    q: "Materi iklan apa saja yang perlu saya siapkan dari biro travel saya?",
-    a: "Sangat simpel. Anda cukup mengirimkan foto dan video dokumentasi perjalanan, suasana jamaah/wisatawan, atau fasilitas armada yang ada di galeri HP Anda. Tim kami yang akan memilah momen terbaik, mengeditnya menjadi visual iklan profesional, dan menyusun copywriting penawarannya.",
+    q: "Gimana kalau iklannya belum menghasilkan closing?",
+    a: "Iklan nggak ditinggal begitu saja. Aku pantau datanya tiap hari, mulai dari klik iklan sampai chat WA yang masuk. Materi yang boncos kita ganti, dan alur penawaran terus kita optimasi sampai closing pertama kamu datang.",
   },
   {
-    q: "Bagaimana conviction dari Tanscale jika closing pertama belum datang?",
-    a: "Nggak ada tebak-tebakan. Semua metrik kami pantau secara terbuka: dari jumlah klik iklan, pengunjung web, hingga tombol WhatsApp yang ditekan. Jika dalam beberapa hari pertama respon belum optimal, kami terus mengevaluasi penawaran dan mengoptimasi website Anda sampai closing pertama datang.",
+    q: "Setelah closing pertama atau lewat 1 bulan, kelanjutannya gimana?",
+    a: "Fleksibel. Kamu bisa lanjutkan jalankan iklannya sendiri secara mandiri, atau kalau kamu mau scale up dan nggak mau repot, kamu bisa pakai jasaku untuk kelola iklan tiap bulan.",
   },
   {
-    q: "Bagaimana jika setelah closing pertama kami ingin terus melanjutkan iklan (scale up)?",
-    a: "Setelah closing pertama berhasil diraih dan Anda melihat ritme leads yang masuk, Anda memiliki fleksibilitas penuh: Anda bisa menjalankan iklannya sendiri secara mandiri, atau mempercayakan retainer manajemen iklan bulanan kepada tim Tanscale untuk terus memperbesar skala agensi Anda.",
+    q: "Kenapa kuotanya dibatasi hanya 5 client per bulan?",
+    a: "Biar pengerjaannya fokus dan terukur. Aku nggak pakai template asal-asalan—semua diriset, materi diolah manual, dan iklan dipantau harian. Makanya kuota dibatasi maksimal 5 client per bulan.",
   },
   {
-    q: "Apakah tim admin/CS saya harus paham IT untuk mengoperasikannya?",
-    a: "Sama sekali tidak. Tim Anda hanya perlu fokus melayani chat WhatsApp yang masuk dari calon pembeli yang sudah terkualifikasi. Seluruh urusan teknis server, website, dan kampanye iklan kami tangani sepenuhnya.",
+    q: "Apakah admin atau CS travel aku harus paham teknis?",
+    a: "Nggak perlu. Semua urusan teknis website, pixel, dan setting iklan Meta aku yang tangani. Admin kamu cuma perlu fokus balas chat WhatsApp yang masuk dan closing-in customer.",
   },
   {
-    q: "Bagaimana cara memulai dan mengamankan 1 dari 5 slot bulan ini?",
-    a: "Cukup isi nomor WhatsApp aktif Anda pada formulir di bawah ini atau klik tombol konsultasi. Kami akan segera menghubungi Anda untuk mengecek ketersediaan kuota slot partner bulan ini.",
+    q: "Gimana cara mulainya?",
+    a: "Tinggal klik tombol 'Amankan Slot' atau hubungi via WhatsApp. Kita diskusi singkat soal kondisi travel kamu dan cek ketersediaan slot bulan ini.",
   },
 ];
 
@@ -58,8 +58,8 @@ export default function FaqSection() {
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5 }}
         >
-          Pertanyaan yang Sering Ditanyakan <br className="hidden md:inline" />
-          <span className="gradient-text">(Frequently Asked Questions)</span>
+          Pertanyaan yang Sering <br className="hidden md:inline" />
+          <span className="gradient-text">Ditanyakan Pemilik Travel</span>
         </motion.h2>
 
 

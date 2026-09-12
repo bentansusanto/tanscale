@@ -9,48 +9,43 @@ import styles from "./PainPointsSection.module.css";
 const problems = [
   {
     num: 1,
-    icon: AlertOctagon,
-    tag: "ZERO TRAFFIC · RUMAH KOSONG",
-    tagType: "red",
-    title: "Punya Website Bagus, Tapi Seperti Rumah Kosong Tanpa Pengunjung",
-    desc: "Masalahnya bukan di website-nya — masalahnya, nggak ada yang lihat. Menaruh link website di bio profil saja tidak akan pernah cukup untuk mendatangkan puluhan calon jamaah atau wisatawan setiap minggu.",
-    impact: "Impact: Website mahal teronggok pasif tanpa pernah menghasilkan booking",
+    icon: TrendingDown,
+    tag: "SOSMED ORGANIK · NGGAK CUKUP",
+    title: "Rajin Posting di IG & FB, Tapi Nggak Ada yang Booking",
+    desc: "Like banyak, follower nambah, tapi yang beneran tanya paket dan transfer DP hampir nggak ada. Sosmed organik bagus buat branding, tapi nggak bisa diandalkan buat mendatangkan customer secara konsisten.",
+    impact: "Akibat: Waktu habis bikin konten, tapi kursi travel tetap kosong",
   },
   {
     num: 2,
-    icon: Clock,
-    tag: "SEO WAITING GAME · 3-6 BULAN",
-    tagType: "amber",
-    title: "Mengandalkan SEO Terlalu Lama, Padahal Butuh Customer Sekarang",
-    desc: "SEO itu bagus untuk jangka panjang, tapi Anda harus menunggu berbulan-bulan agar terindeks. Kalau Anda butuh customer dan kuota seat terisi sekarang, bukan 30–90 hari lagi, Anda butuh cara lain yang langsung mendatangkan audiens.",
-    impact: "Impact: Biaya operasional armada & gaji tim terus berjalan tiap hari",
+    icon: AlertOctagon,
+    tag: "PERNAH COBA IKLAN · TAPI BONCOS",
+    title: "Iklan Udah Jalan, Budget Habis, Nggak Ada Closing",
+    desc: "Pasang iklan sendiri, langsung ke WA. Yang masuk kebanyakan nanya harga lalu ghosting. Budget habis tapi nggak ada satu pun yang booking.",
+    impact: "Akibat: Kapok pasang iklan, padahal masalahnya bukan di iklannya",
   },
   {
     num: 3,
-    icon: TrendingDown,
-    tag: "BUDGET BONCOS · 90% GHOSTING",
-    tagType: "red",
-    title: "Pernah Coba Pasang Iklan Sendiri Tapi Cuma Dapat Chat 'P' Lalu Hilang",
-    desc: "Memasang iklan sembarangan langsung diarahkan ke nomor WhatsApp tanpa landing page penyaring. Akibatnya ratusan penonton iseng cuma nanya 'P', minta pricelist, lalu langsung ghosting saat dibalas.",
-    impact: "Impact: Uang iklan hangus di Meta tanpa ada satu pun transaksi closing",
+    icon: Clock,
+    tag: "WEBSITE ADA · TAPI SEPI",
+    title: "Sudah Punya Website, Tapi Nggak Ada yang Masuk",
+    desc: "Website bagus, tapi nggak ada traffic. Pengunjung dari iklan masuk, lihat sebentar, lalu keluar. Nggak ada alur yang jelas.",
+    impact: "Akibat: Website jadi pajangan, nggak pernah menghasilkan konversi",
   },
   {
     num: 4,
     icon: BarChart3,
-    tag: "UNOPTIMIZED ASSETS · KONTEN MUBADIR",
-    tagType: "amber",
-    title: "Dokumentasi Foto & Video Menumpuk di HP Tanpa Diolah Jadi Format Iklan",
-    desc: "Anda punya banyak dokumentasi bahagia jamaah atau wisatawan di galeri handphone, tapi tidak tahu cara meriset audiens yang tepat dan mengolahnya menjadi copywriting penawaran yang memicu transfer DP.",
-    impact: "Impact: Kalah bersaing dengan biro lain yang iklannya lebih masif & menarik",
+    tag: "KONTEN ADA · TAPI NGGAK NGONVERSI",
+    title: "Konten di HP Numpuk, Tapi Nggak Tahu Mana yang Bisa Dijadiin Iklan",
+    desc: "Foto & video perjalanan banyak, tapi bingung mau diapain. Nggak tahu audiens mana yang ditarget, angle iklan yang works, atau caption yang bikin orang mau klik.",
+    impact: "Akibat: Konten bagus nganggur, iklan asal-asalan hasilnya zonk",
   },
   {
     num: 5,
     icon: Database,
-    tag: "NO TRACKING · BUTA DATA",
-    tagType: "blue",
-    title: "Tebak-Tebakan Tanpa Pelacakan Data yang Jelas & Terukur",
-    desc: "Tidak pernah tahu berapa biaya riil per chat masuk yang valid, berapa rasio konversi pengunjung website, dan materi iklan mana yang benar-benar menghasilkan closing. Semuanya serba kira-kira.",
-    impact: "Impact: Sulit melakukan scale-up karena tidak punya data metrik yang pasti",
+    tag: "NGGAK ADA DATA · SERBA KIRA-KIRA",
+    title: "Nggak Tahu Iklan Mana yang Works dan yang Boncos",
+    desc: "Nggak ada data yang bisa dipegang. Nggak tahu cost per chat berapa, iklan mana yang perform, dan mana yang cuma ngabisin budget doang.",
+    impact: "Akibat: Susah optimasi karena semua serba tebak-tebakan",
   },
 ];
 
@@ -67,14 +62,14 @@ export default function PainPointsSection() {
           transition={{ duration: 0.5 }}
         >
           <div className={styles.sectionPill}>
-            <span>DIAGNOSTIK BISNIS TRAVEL AGENCY</span>
+            <span>KENAPA IKLAN TRAVEL KAMU BELUM CLOSING?</span>
           </div>
           <h2 className="h2-heading">
-            Website Bagus Tapi Sepi? <br className="hidden md:inline" />
-            <span className="gradient-text">Masalahnya Bukan di Website-nya — Nggak Ada yang Lihat.</span>
+            Masih Ngandalin Posting Sosmed?{" "}
+            <span className="gradient-text">Ini yang Bikin Travel Kamu Susah Dapat Customer.</span>
           </h2>
-          <p className="body-text" style={{ maxWidth: 740, margin: "0 auto 40px" }}>
-            SEO bisa menjawab masalah kunjungan, tapi Anda harus menunggu berbulan-bulan. Kalau agensi Anda butuh customer sekarang, inilah 5 kebocoran nyata yang wajib diselesaikan dengan kombinasi Website Flagship dan Meta Ads tertarget.
+          <p className="body-text" style={{ maxWidth: 680, margin: "0 auto 40px" }}>
+            Posting organik nggak cukup buat mendatangkan customer secara konsisten. Dan kalau pernah coba iklan tapi nggak hasilnya, ini kemungkinan besar penyebabnya.
           </p>
         </motion.div>
 
@@ -120,14 +115,14 @@ export default function PainPointsSection() {
         >
           <div className={styles.closingContent}>
             <h4 className={styles.closingHeading}>
-              Jangan Biarkan Website Anda Menjadi Rumah Kosong Tanpa Pembeli
+              Kalau kamu ngerasain salah satu dari ini, berarti kita perlu ngobrol.
             </h4>
             <p className={styles.closingSub}>
-              Bangun Website Flagship dan dapatkan setup iklan Meta Ads 100% gratis. Kuota kami batasi ketat hanya 5 slot per bulan agar fokus dan terukur.
+              Aku bantu audit alur iklan kamu, dari materi, targeting, sampai website, terus kita perbaiki bareng. Slot bulan ini terbatas 5.
             </p>
           </div>
           <Link href="/contact" className="btn-cta-blue">
-            <span>Amankan 1 dari 5 Slot Bulan Ini</span>
+            <span>Konsultasi Gratis Sekarang</span>
             <ArrowRight size={17} />
           </Link>
         </motion.div>

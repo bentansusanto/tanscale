@@ -20,34 +20,40 @@ import styles from "./ContactPage.module.css";
 const contactInfo = [
   {
     icon: Phone,
-    label: "WhatsApp Senior Consultant",
-    value: "+62 812 3456 7890",
-    href: "https://wa.me/6281234567890",
-    badge: "Fast Response < 15 Min",
+    label: "WhatsApp Konsultasi",
+    value: "+62 882 7745 0792",
+    href: "https://wa.me/6288277450792",
+    badge: "Fast Response",
   },
   {
     icon: Mail,
-    label: "Email Partnership",
-    value: "growth@tanscale.com",
-    href: "mailto:growth@tanscale.com",
-    badge: "Official Inquiries",
+    label: "Email",
+    value: "bennytansusanto@gmail.com",
+    href: "mailto:bennytansusanto@gmail.com",
+    badge: "Official",
   },
   {
     icon: MapPin,
-    label: "Headquarters",
-    value: "Jakarta Selatan, Indonesia",
+    label: "Lokasi",
+    value: "Batam, Indonesia",
     href: "#",
-    badge: "Main Office",
+    badge: "Headquarters",
   },
 ];
 
-const serviceCategories = [
-  "Biro Perjalanan Umroh & Haji Khusus",
-  "Open Trip Domestik (Bromo, Labuan Bajo, Raja Ampat, dll.)",
-  "Tour Internasional & Wisata Halal (Turki, Jepang, Eropa)",
-  "Corporate Outbound & MICE Gathering",
-  "Custom Private Trip Keluarga & VIP",
-  "Lainnya / Ingin Konsultasi Umum",
+const packageOptions = [
+  {
+    id: "flagship",
+    name: "Website Baru + Setup Iklan Meta (Rp 6.500.000)",
+  },
+  {
+    id: "ads",
+    name: "Audit Website & Kelola Iklan Meta (Rp 3.500.000 / 1 Bulan)",
+  },
+  {
+    id: "consultation",
+    name: "Konsultasi Terlebih Dahulu",
+  },
 ];
 
 function ContactForm() {
@@ -75,12 +81,14 @@ function ContactForm() {
     if (planParam === "ads") {
       setForm((prev) => ({
         ...prev,
-        message: "Saya sudah punya website, ingin konsultasi Audit Website & Kelola Iklan Meta (Rp 3,5 Juta / 1 Bulan)",
+        service: "Audit Website & Kelola Iklan Meta (Rp 3.500.000 / 1 Bulan)",
+        message: prev.message || "Aku sudah punya website, mau konsultasi Audit Website & Kelola Iklan Meta (Rp 3,5 Juta / 1 Bulan)",
       }));
     } else if (planParam === "flagship") {
       setForm((prev) => ({
         ...prev,
-        message: "Ingin konsultasi Paket Lengkap Website Baru + Setup Iklan Meta Gratis (Rp 6,5 Juta)",
+        service: "Website Baru + Setup Iklan Meta (Rp 6.500.000)",
+        message: prev.message || "Aku mau konsultasi Website Baru + Setup Iklan Meta (Rp 6,5 Juta)",
       }));
     }
   }, [searchParams]);
@@ -106,10 +114,8 @@ function ContactForm() {
     setLoading(false);
     setSubmitted(true);
 
-    const isAdsPlan = searchParams.get("plan") === "ads" || form.message.includes("3,5") || form.message.includes("2,5");
-    const planName = isAdsPlan
-      ? "Audit Website & Kelola Iklan Meta (Rp 3,5 Juta / 1 Bulan)"
-      : "Paket Lengkap Website Baru + Setup Iklan Meta Gratis (Rp 6,5 Juta)";
+    const isAdsPlan = form.service.includes("3.500.000") || searchParams.get("plan") === "ads";
+    const planName = form.service || "Website Baru + Setup Iklan Meta (Rp 6.500.000)";
     const planValue = isAdsPlan ? 3500000 : 6500000;
 
     // Fire Meta Pixel & Conversions API (CAPI) Lead event with hashed user data
@@ -120,26 +126,26 @@ function ContactForm() {
         email: form.email,
       },
       customData: {
-        content_name: form.service || planName,
+        content_name: planName,
         value: planValue,
         currency: "IDR",
       },
     });
 
-    const payload = `Halo Tim Senior Consultant Tanscale, saya pemilik biro perjalanan dan ingin konsultasi ${planName}:
+    const payload = `Halo Mas Benny / Tanscale, aku mau konsultasi:
 
-📋 DATA PENDAFTAR:
-• Nama Agensi: ${form.agencyName}
-• Nama Pemilik/PIC: ${form.fullName}
+📋 DATA TRAVEL:
+• Nama Travel: ${form.agencyName}
+• Nama: ${form.fullName}
 • WhatsApp: ${cleanPhone}
-• Email Bisnis: ${form.email}
-• Fokus Layanan/Rute: ${form.service || "Belum dipilih"}
-• Omset Saat Ini: ${form.revenue || "Belum dipilih"}
-• Rencana / Kebutuhan: ${form.message || "Ingin cepat closing dengan strategi digital"}
+• Email: ${form.email}
+• Paket yang Dipilih: ${form.service || "Belum dipilih"}
+• Omzet Saat Ini: ${form.revenue || "Belum dipilih"}
+• Kendala / Kebutuhan: ${form.message || "Ingin dapat customer dari iklan Meta"}
 
-Mohon informasi ketersediaan slot bulan ini. Terima kasih.`;
+Mau cek ketersediaan slot bulan ini. Terima kasih!`;
 
-    window.open(`https://wa.me/6281234567890?text=${encodeURIComponent(payload)}`, "_blank");
+    window.open(`https://wa.me/6288277450792?text=${encodeURIComponent(payload)}`, "_blank");
   };
 
   return (
@@ -151,10 +157,10 @@ Mohon informasi ketersediaan slot bulan ini. Terima kasih.`;
           </div>
           <h2 className={styles.successTitle}>Permintaan Terkirim!</h2>
           <p className={styles.successDesc}>
-            Anda sedang diarahkan ke WhatsApp konsultan senior Tanscale. Jika tautan WhatsApp tidak terbuka otomatis, silakan klik tombol di bawah ini:
+            Kamu sedang diarahkan ke WhatsApp. Kalau belum terbuka otomatis, silakan klik tombol di bawah ini:
           </p>
           <a
-            href="https://wa.me/6281234567890"
+            href="https://wa.me/6288277450792"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-cta-blue"
@@ -169,11 +175,11 @@ Mohon informasi ketersediaan slot bulan ini. Terima kasih.`;
           <div className={styles.formHeader}>
             <div className={styles.headerBadge}>
               <Sparkles size={13} color="#60A5FA" />
-              <span>Sesi Diskusi 45 Menit · 100% Gratis</span>
+              <span>Diskusi Singkat · 100% Gratis</span>
             </div>
-            <h2 className={styles.formTitle}>Formulir Kualifikasi &amp; Kuota 5 Slot</h2>
+            <h2 className={styles.formTitle}>Formulir Konsultasi Travel</h2>
             <p className={styles.formSubtitle}>
-              Lengkapi data di bawah ini agar konsultan kami dapat menyiapkan estimasi performa Meta Ads dan mengecek ketersediaan 1 dari 5 slot bulan ini sebelum sesi dimulai.
+              Isi data singkat di bawah biar aku bisa pelajari kondisi travel kamu dan cek sisa slot bulan ini.
             </p>
           </div>
 
@@ -181,14 +187,14 @@ Mohon informasi ketersediaan slot bulan ini. Terima kasih.`;
             <div className={styles.row}>
               <div className={styles.field}>
                 <label className={styles.label} htmlFor="agencyName">
-                  Nama Biro Perjalanan / Agensi *
+                  Nama Bisnis Travel *
                 </label>
                 <input
                   id="agencyName"
                   name="agencyName"
                   type="text"
                   className={styles.input}
-                  placeholder="Contoh: Barokah Umroh & Tour"
+                  placeholder="Contoh: Barokah Tour"
                   value={form.agencyName}
                   onChange={handleChange}
                   required
@@ -197,14 +203,14 @@ Mohon informasi ketersediaan slot bulan ini. Terima kasih.`;
 
               <div className={styles.field}>
                 <label className={styles.label} htmlFor="fullName">
-                  Nama Pemilik / PIC *
+                  Nama Kamu *
                 </label>
                 <input
                   id="fullName"
                   name="fullName"
                   type="text"
                   className={styles.input}
-                  placeholder="Contoh: Pak Hendra / Bu Maya"
+                  placeholder="Contoh: Hendra"
                   value={form.fullName}
                   onChange={handleChange}
                   required
@@ -222,7 +228,7 @@ Mohon informasi ketersediaan slot bulan ini. Terima kasih.`;
                   name="whatsapp"
                   type="tel"
                   className={styles.input}
-                  placeholder="Contoh: 081234567890 / 6281234567890"
+                  placeholder="Contoh: 081234567890"
                   value={form.whatsapp}
                   onChange={handleChange}
                   required
@@ -249,7 +255,7 @@ Mohon informasi ketersediaan slot bulan ini. Terima kasih.`;
             <div className={styles.row}>
               <div className={styles.field}>
                 <label className={styles.label} htmlFor="service">
-                  Fokus Layanan / Rute Utama *
+                  Paket yang Dipilih *
                 </label>
                 <select
                   id="service"
@@ -260,11 +266,11 @@ Mohon informasi ketersediaan slot bulan ini. Terima kasih.`;
                   required
                 >
                   <option value="" disabled>
-                    -- Pilih Fokus Rute --
+                    -- Pilih Paket --
                   </option>
-                  {serviceCategories.map((s) => (
-                    <option key={s} value={s}>
-                      {s}
+                  {packageOptions.map((pkg) => (
+                    <option key={pkg.id} value={pkg.name}>
+                      {pkg.name}
                     </option>
                   ))}
                 </select>
@@ -272,7 +278,7 @@ Mohon informasi ketersediaan slot bulan ini. Terima kasih.`;
 
               <div className={styles.field}>
                 <label className={styles.label} htmlFor="revenue">
-                  Kisaran Omset Rata-Rata Bulanan
+                  Kisaran Omzet Saat Ini (Opsional)
                 </label>
                 <select
                   id="revenue"
@@ -281,7 +287,7 @@ Mohon informasi ketersediaan slot bulan ini. Terima kasih.`;
                   value={form.revenue}
                   onChange={handleChange}
                 >
-                  <option value="">-- Pilih Estimasi Omset --</option>
+                  <option value="">-- Pilih Estimasi Omzet --</option>
                   <option value="Di bawah 50 Juta">Di bawah Rp 50 Juta / bulan</option>
                   <option value="50 - 200 Juta">Rp 50 Juta – Rp 200 Juta / bulan</option>
                   <option value="200 Juta - 1 Miliar">Rp 200 Juta – Rp 1 Miliar / bulan</option>
@@ -292,13 +298,13 @@ Mohon informasi ketersediaan slot bulan ini. Terima kasih.`;
 
             <div className={styles.field}>
               <label className={styles.label} htmlFor="message">
-                Kendala Utama atau Target Khusus Anda Saat Ini
+                Kendala atau Kebutuhan Kamu Saat Ini
               </label>
               <textarea
                 id="message"
                 name="message"
                 className={styles.textarea}
-                placeholder="Ceritakan kendala iklan, chat ghosting, atau rute mana yang paling ingin Anda scale-up..."
+                placeholder="Ceritakan kendala iklan, website, atau rute mana yang ingin kamu scale-up..."
                 rows={3}
                 value={form.message}
                 onChange={handleChange}
@@ -323,11 +329,11 @@ Mohon informasi ketersediaan slot bulan ini. Terima kasih.`;
             <div className={styles.formFooterNotes}>
               <div className={styles.noteItem}>
                 <ShieldCheck size={14} color="#10B981" />
-                <span>Data 100% Dijamin Rahasia &amp; Non-Spam</span>
+                <span>Data 100% Aman &amp; Bebas Spam</span>
               </div>
               <div className={styles.noteItem}>
                 <Clock size={14} color="#10B981" />
-                <span>Respon Verifikasi &lt; 60 Menit</span>
+                <span>Respon Cepat via WhatsApp</span>
               </div>
             </div>
           </form>
@@ -352,18 +358,13 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className={styles.statusBadge}>
-              <span className="status-dot-pulse" />
-              <span>CONSULTATION PORTAL · JANUARI - DESEMBER 2026</span>
-            </div>
-
             <h1 className={`h1-hero ${styles.mainHeading}`}>
               Konsultasi &amp; Amankan Slot <br />
-              <span className="gradient-text">Website Flagship + Setup Meta Ads Gratis</span>
+              <span className="gradient-text">Website &amp; Iklan Meta Travel Kamu</span>
             </h1>
 
             <p className={styles.heroDescription}>
-              Bedah tuntas titik kebocoran leads, siapkan strategi iklan Meta Ads yang cepat mendatangkan customer, dan amankan 1 dari 5 slot partner travel agency bulan ini.
+              Diskusikan kendala iklan atau website travel kamu, susun alur konversi yang jelas, dan amankan 1 dari 5 slot bulan ini.
             </p>
           </motion.div>
         </div>
@@ -415,17 +416,16 @@ export default function ContactPage() {
                   <span>Tersedia Maksimal 5 Slot Bulan Ini</span>
                 </div>
 
-
                 <h3 className={styles.benefitTitle}>
-                  Yang Anda Dapatkan Dalam Sesi 45 Menit:
+                  Yang Kamu Dapatkan di Sesi Konsultasi:
                 </h3>
 
                 <div className={styles.benefitList}>
                   {[
-                    "Analisis titik kebocoran leads dan solusi anti chat 'P' yang ghosting.",
-                    "Skema riset target audiens Meta Ads khusus calon jamaah & wisatawan kota Anda.",
-                    "Strategi pengolahan dokumentasi foto/video galeri HP Anda menjadi materi iklan.",
-                    "Pengecekan kuota ketersediaan 1 dari 5 slot partner travel agency bulan ini.",
+                    "Audit alur iklan & website kamu, cari tahu kenapa belum closing.",
+                    "Riset target audiens Meta Ads yang siap beli untuk rute travel kamu.",
+                    "Rekomendasi materi foto & video HP kamu yang layak diiklankan.",
+                    "Pengecekan kuota ketersediaan 5 slot client bulan ini.",
                   ].map((item, i) => (
                     <div key={i} className={styles.benefitItem}>
                       <CheckCircle2 size={16} color="#10B981" className={styles.benefitCheck} />
@@ -436,7 +436,7 @@ export default function ContactPage() {
 
                 <div className={styles.guaranteeReminder}>
                   <ShieldCheck size={18} color="#10B981" />
-                  <span>Conviction Nyata: Semua Terukur, Semua Kami Pantau Sampai Closing Pertama Datang.</span>
+                  <span>Semua Terukur: Dipantau bareng sampai closing pertama kamu datang.</span>
                 </div>
               </div>
 

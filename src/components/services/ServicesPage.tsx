@@ -98,7 +98,7 @@ export default function ServicesPage() {
   const waMessage = encodeURIComponent(
     "Halo Tanscale, saya ingin konsultasi mengenai 4 Pilar Solusi Scale-Up untuk bisnis travel saya."
   );
-  const waUrl = `https://wa.me/6281234567890?text=${waMessage}`;
+  const waUrl = `https://wa.me/6288277450792?text=${waMessage}`;
 
   return (
     <>

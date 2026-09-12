@@ -22,10 +22,9 @@ const footerLinks = {
 
 export default function Footer() {
   const waMessage = encodeURIComponent(
-    "Halo Tanscale, saya pemilik Travel Agency dan ingin konsultasi mengenai paket Website Flagship + Setup Meta Ads Gratis (5 Slot/Bulan)."
+    "Halo Tanscale, aku pemilik bisnis travel dan ingin konsultasi pembuatan website & iklan Meta Ads (5 Slot Bulan Ini)."
   );
-  const waUrl = `https://wa.me/6281234567890?text=${waMessage}`;
-
+  const waUrl = `https://wa.me/6288277450792?text=${waMessage}`;
 
   return (
     <footer className={styles.footer}>
@@ -40,28 +39,26 @@ export default function Footer() {
                   alt="Tanscale Logo"
                   width={28}
                   height={28}
-
                   className={styles.logoImg}
                 />
               </div>
               <span className={styles.logoText}>
                 Tanscale
               </span>
-
             </Link>
 
             <p className={styles.tagline}>
-              Sistem Akselerasi Omset &amp; Solusi Digital Khusus Biro Perjalanan Wisata, Umroh, dan Tour Operator di Indonesia.
+              Bantu bisnis travel mendatangkan calon customer tertarget lewat kombinasi website teroptimasi dan iklan Meta Ads.
             </p>
             <div className={styles.contactList}>
               <a href={waUrl} target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
-                <MessageCircle size={15} color="#10B981" /> WhatsApp: +62 812 3456 7890
+                <MessageCircle size={15} color="#10B981" /> WhatsApp: +62 882 7745 0792
               </a>
-              <a href="mailto:growth@tanscale.com" className={styles.contactItem}>
-                <Mail size={15} color="#60A5FA" /> growth@tanscale.com
+              <a href="mailto:bennytansusanto@gmail.com" className={styles.contactItem}>
+                <Mail size={15} color="#60A5FA" /> bennytansusanto@gmail.com
               </a>
               <span className={styles.contactItem}>
-                <MapPin size={15} color="#94A3B8" /> Jakarta, Indonesia
+                <MapPin size={15} color="#94A3B8" /> Batam, Indonesia
               </span>
             </div>
           </div>

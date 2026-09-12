@@ -8,31 +8,27 @@ import styles from "./MetricsSection.module.css";
 const logicCards = [
   {
     num: 1,
-    title: "Trafik Tertarget Instan Begitu Website Live (Zero Waiting Time)",
-    body: "Berbeda dengan SEO yang butuh 3–6 bulan untuk naik peringkat, Meta Ads langsung menyuntikkan ribuan impresi ke audiens spesifik (keluarga, pencari paket umroh, dan wisatawan aktif) di hari pertama website Anda aktif. Anda tidak perlu menunggu lama untuk melihat hasil.",
-    stat: "Hari Ke-1 Live Langsung Terhubung ke Calon Pembeli",
-    footer: "Solusi cepat bagi agensi travel yang butuh perputaran cashflow sekarang.",
+    title: "Traffic Langsung Masuk di Hari Pertama Iklan Tayang",
+    body: "Beda sama SEO yang butuh berbulan-bulan, Meta Ads langsung kirim traffic ke website kamu sejak iklan mulai di publish. Audiens yang lihat iklan kamu sudah tertarget, bukan orang random.",
+    stat: "Hari ke-1 live, calon customer sudah bisa masuk",
   },
   {
     num: 2,
-    title: "Olah Dokumentasi Visual Anda Menjadi Iklan Berdaya Pikat Tinggi",
-    body: "Dokumentasi foto dan video tour/umroh Anda yang menumpuk di handphone tidak dibiarkan menganggur. Tim kami memilah momen terbaik, meriset sudut emosional audiens, dan menyusun copywriting penawaran yang meyakinkan mereka untuk segera bertanya dan mendaftar.",
-    stat: "Mengubah Galeri Handphone Jadi Creative Ads yang Menghasilkan",
-    footer: "Sentuhan visual autentik travel Anda dipadukan dengan copywriting persuasif.",
+    title: "Foto & Video di HP Kamu Kita Ubah Jadi Materi Iklan yang Menghasilkan Penjualan",
+    body: "Konten perjalanan kamu yang selama ini cuma jadi arsip kita filter, kita edit, dan kita jadiin creative iklan.",
+    stat: "Konten nganggur jadi iklan yang perform",
   },
   {
     num: 3,
-    title: "Pelacakan Presisi: Dari Klik Iklan Hingga Tombol Chat WhatsApp",
-    body: "Kami memasang Meta Pixel dan custom conversion tracking di Website Flagship Anda. Semua data tercatat: berapa orang yang klik iklan, berapa yang membaca rincian paket, dan berapa yang menekan tombol chat ke admin. Tidak ada tebak-tebakan.",
-    stat: "Semua Traffic Terlacak Sampai Chat WhatsApp Masuk",
-    footer: "Nggak ada tebak-tebakan. Semua terukur, semua kami pantau secara transparan.",
+    title: "Semua Terlacak, dari Klik Iklan Sampai Chat WA Masuk",
+    body: "Kita pasang Meta Pixel dan tracking konversi di website kamu. Jadi kita tahu persis berapa orang klik, berapa yang baca, dan berapa yang akhirnya chat ke WA.",
+    stat: "Nggak ada yang cuma tebak-tebakan",
   },
   {
     num: 4,
-    title: "Conviction Nyata: Kami Dampingi & Optimasi Sampai Closing Pertama Datang",
-    body: "Begitu closing pertama datang, kerja kami belum selesai. Kami mengevaluasi performa iklan dan mengoptimasi website Anda berdasarkan perilaku pengunjung riil. Dan jika Anda ingin terus scale up setiap bulan, kami juga siap memegang manajemen iklan bulanan Anda.",
-    stat: "Setup Iklan Gratis + Optimasi Berkelanjutan Hingga Closing",
-    footer: "Komitmen kemitraan nyata agar agensi Anda tidak jalan sendirian.",
+    title: "Aku Pantau Iklan Sampai Closing Serta Menentukan Strategi Selanjutnya",
+    body: "Iklan yang sudah tayang terus aku pantau performanya. Mana yang works kita scale, mana yang boncos kita stop dan ganti. Ketika ada penjualan, kita bisa tentukan langkah selanjutnya.",
+    stat: "Iklan jalan, aku tetap pantau",
   },
 ];
 
@@ -50,14 +46,14 @@ export default function MetricsSection() {
         >
           <div className={styles.sectionPill}>
             <Sparkles size={13} color="#94A3B8" />
-            <span>SOLUSI: ANALISA MENDALAM WEBSITE + META ADS</span>
+            <span>KENAPA WEBSITE + META ADS?</span>
           </div>
           <h2 className="h2-heading">
-            Kenapa Kombinasi Website + Meta Ads <br className="hidden md:inline" />
-            <span className="gradient-text">Langsung Menghasilkan Customer Cepat?</span>
+            Ini yang Bikin Iklan Travel Kamu{" "}
+            <span className="gradient-text">Bisa Closing, Bukan Cuma Ramai.</span>
           </h2>
-          <p className="body-text" style={{ maxWidth: 760, margin: "0 auto" }}>
-            Kami memangkas masa tunggu berbulan-bulan. Dengan memadukan Website Flagship berkonversi tinggi dan iklan Meta Ads tertarget yang kami setup secara gratis, agensi Anda langsung siap menerima booking sejak hari pertama.
+          <p className="body-text" style={{ maxWidth: 640, margin: "0 auto" }}>
+            Kombinasi website yang dioptimasi + iklan Meta Ads yang tertarget bikin setiap rupiah budget iklan kamu berpotensi menghasilkan konversi.
           </p>
         </motion.div>
 
@@ -83,11 +79,6 @@ export default function MetricsSection() {
 
               {/* Key Metric Stat */}
               <div className={styles.metricStat}>{card.stat}</div>
-
-              {/* Footer Callout */}
-              <div className={styles.footerCallout}>
-                &quot;{card.footer}&quot;
-              </div>
             </motion.div>
           ))}
         </div>

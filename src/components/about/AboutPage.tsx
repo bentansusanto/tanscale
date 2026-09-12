@@ -38,7 +38,7 @@ export default function AboutPage() {
   const waMessage = encodeURIComponent(
     "Halo Tanscale, saya ingin konsultasi mengenai program akselerasi omset untuk bisnis travel saya."
   );
-  const waUrl = `https://wa.me/6281234567890?text=${waMessage}`;
+  const waUrl = `https://wa.me/6288277450792?text=${waMessage}`;
 
   return (
     <>

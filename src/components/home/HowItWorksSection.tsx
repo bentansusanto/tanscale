@@ -8,42 +8,42 @@ import styles from "./HowItWorksSection.module.css";
 const methodologies = [
   {
     icon: MonitorSmartphone,
-    tag: "LANGKAH 01 · WEBSITE FLAGSHIP",
-    title: "Pembangunan Website Flagship Berkonversi Tinggi",
+    tag: "LANGKAH 01 · BIKIN WEBSITE",
+    title: "Website Travel Kamu Kita Bangun dari Nol",
     points: [
-      "Website biro perjalanan berstandar modern & mobile-first (sub-second loading)",
-      "Katalog paket tour & umroh interaktif, kalkulator DP, dan itinerary transparan",
-      "Sistem WhatsApp lead filter otomatis untuk menyaring leads iseng sebelum masuk chat",
+      "Desain modern, cepat dibuka di HP, dan enak dilihat",
+      "Ada katalog paket, info harga, dan tombol WA langsung ke admin",
+      "Layout dibuat khusus biar pengunjung nggak bingung dan langsung mau chat",
     ],
   },
   {
     icon: Sparkles,
-    tag: "LANGKAH 02 · KONTEN & AUDIENS",
-    title: "Riset Audiens & Olah Dokumentasi Jadi Iklan Menarik",
+    tag: "LANGKAH 02 · SIAPKAN MATERI IKLAN",
+    title: "Foto & Video HP Kamu Kita Ubah Jadi Creative Iklan",
     points: [
-      "Riset demografi audiens yang siap beli (jamaah umroh, keluarga liburan, gathering)",
-      "Memilah foto & video dokumentasi perjalanan Anda dari galeri HP menjadi materi iklan",
-      "Menyusun copywriting penawaran persuasif yang menggugah emosi dan memicu chat",
+      "Kita riset audiens mana yang paling potensial buat ditarget",
+      "Foto & video perjalanan kamu kita filter dan edit jadi materi iklan",
+      "Kita susun copywriting iklan yang bikin orang penasaran dan mau klik",
     ],
   },
   {
     icon: Globe2,
-    tag: "LANGKAH 03 · SETUP IKLAN GRATIS",
-    title: "Setup & Peluncuran Iklan Meta Ads (100% GRATIS)",
+    tag: "LANGKAH 03 · SETUP & LAUNCH IKLAN",
+    title: "Iklan Meta Ads Kita Setup dan Langsung Tayang",
     points: [
-      "Setup kampanye iklan di Facebook & Instagram Ads Manager tanpa biaya jasa",
-      "Pemasangan Meta Pixel & Conversion Event Tracking di website Anda",
-      "Pelacakan presisi dari klik iklan sampai tombol chat WhatsApp admin Anda",
+      "Setup kampanye di Facebook & Instagram Ads Manager, gratis jasa",
+      "Pasang Meta Pixel dan tracking konversi di website kamu",
+      "Iklan tayang, traffic langsung masuk ke website",
     ],
   },
   {
     icon: ShieldCheck,
-    tag: "LANGKAH 04 · CONVICTION & OPTIMASI",
-    title: "Pemantauan Harian & Optimasi Sampai Closing Pertama",
+    tag: "LANGKAH 04 · PANTAU & OPTIMASI",
+    title: "Iklan Dipantau, yang Boncos Diganti, yang Works Di-scale",
     points: [
-      "Nggak ada tebak-tebakan: semua metrik traffic dan chat dipantau secara transparan",
-      "Optimasi website dan penawaran berdasar data riil pengunjung sampai closing pertama tiba",
-      "Opsi scale-up manajemen iklan bulanan jika Anda ingin terus memperbesar omset",
+      "Performa iklan kita pantau tiap hari, bukan cuma ditinggal jalan sendiri",
+      "Iklan yang nggak perform kita stop, yang bagus kita optimalkan",
+      "Kalau kamu mau lanjut, kita bisa kelola iklannya setiap bulan",
     ],
   },
 ];
@@ -62,14 +62,14 @@ export default function HowItWorksSection() {
         >
           <div className={styles.sectionPill}>
             <Sparkles size={13} color="#94A3B8" />
-            <span>ALUR EKSEKUSI CEPAT &amp; TERUKUR</span>
+            <span>CARA KERJANYA</span>
           </div>
           <h2 className="h2-heading">
-            Apa yang Kami Kerjakan untuk Travel Agency Anda <br className="hidden md:inline" />
-            <span className="gradient-text">Dari Website Siap Pakai Hingga Iklan Meta Berjalan</span>
+            Dari Nol Sampai Iklan Tayang,{" "}
+            <span className="gradient-text">Semua Kita Kerjain Bareng.</span>
           </h2>
-          <p className="body-text" style={{ maxWidth: 740, margin: "0 auto 36px" }}>
-            Kami mengambil alih seluruh kerumitan teknis: membangun website kelas atas, meriset audiens, mengolah materi visual Anda, dan menyetel iklan Meta Ads secara gratis agar Anda bisa fokus melayani customer yang masuk.
+          <p className="body-text" style={{ maxWidth: 640, margin: "0 auto 36px" }}>
+            Kamu tinggal siapin foto & video perjalanan dari HP. Sisanya aku yang handle.
           </p>
         </motion.div>
 
@@ -113,9 +113,9 @@ export default function HowItWorksSection() {
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <p className={styles.closingP}>Bukan spekulasi. Semua terukur, semua kami pantau sampai closing pertama datang.</p>
+          <p className={styles.closingP}>Semua terukur. Kamu tahu iklan kamu lagi ngapain, dan hasilnya kelihatan.</p>
           <Link href="/contact" className="btn-cta-blue" style={{ marginTop: 18 }}>
-            <span>Amankan 1 dari 5 Slot Bulan Ini</span>
+            <span>Amankan Slot Bulan Ini</span>
             <ArrowRight size={17} />
           </Link>
         </motion.div>

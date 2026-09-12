@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { CheckCircle2, ShieldCheck, ArrowRight, SearchCheck, Sparkles } from "lucide-react";
+import { CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
 import styles from "./TestimonialsSection.module.css";
 
 const conditions = [
-  "Jasa Setup Iklan Meta Ads 100% GRATIS: Anda tidak membayar biaya jasa sepeserpun. Saldo budget iklan Anda bayarkan langsung ke Meta secara transparan.",
-  "Pelacakan Data Menyeluruh: Meta Pixel dan Conversion Tracking dipasang presisi. Anda melihat data riil dari klik iklan, pengunjung paket, hingga chat WhatsApp yang masuk.",
-  "Optimasi Berkelanjutan Sampai Closing: Begitu website live dan iklan jalan, kerja kami belum selesai. Kami evaluasi data audiens dan optimasi website Anda sampai closing pertama datang.",
-  "Limit Ketat 5 Slot per Bulan: Kami hanya menerima 5 travel agency per bulan agar tim kami bisa fokus meriset audiens, mengolah materi visual, dan memantau performa iklan harian Anda.",
+  "Setup Iklan Meta Gratis: Nggak ada biaya jasa setting iklan. Budget saldo iklan kamu bayar langsung ke Meta.",
+  "Data Terlacak Jelas: Meta Pixel & tracking konversi aku pasang rapi, jadi kamu tahu dari klik iklan sampai chat WA yang masuk.",
+  "Dipantau Sampai Closing: Iklan jalan bukan ditinggal. Aku pantau performanya dan optimasi terus sampai closing pertama kamu datang.",
+  "Fokus, Terbatas 5 Client / Bulan: Kuota dibatasi agar aku bisa fokus riset audiens, olah materi iklan, dan pantau hasilnya tiap hari.",
 ];
 
 export default function TestimonialsSection() {
@@ -25,7 +25,7 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.5 }}
         >
           Nggak Ada Tebak-Tebakan. <br className="hidden md:inline" />
-          <span className="gradient-text">Semua Terukur, Semua Kami Pantau</span>
+          <span className="gradient-text">Semua Terukur, Semua Aku Pantau</span>
         </motion.h2>
 
         {/* Intro Text */}
@@ -37,7 +37,7 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.5, delay: 0.1 }}
           style={{ textAlign: "center", margin: "0 auto 32px" }}
         >
-          Kami tidak datang dengan janji muluk atau testimoni rekayasa. Ketika bermitra dengan Tanscale, Anda mendapatkan conviction kerja nyata: pendampingan terukur dari pembuatan website, setup iklan Meta Ads gratis, hingga closing pertama Anda tiba.
+          Aku nggak datang dengan janji muluk. Kamu dapat pendampingan langsung dariku: dari website siap pakai, iklan Meta ditayangkan, sampai closing pertama kamu datang.
         </motion.p>
 
         {/* Main Guarantee Box */}
@@ -52,10 +52,10 @@ export default function TestimonialsSection() {
             <ShieldCheck size={38} color="#10B981" />
           </div>
 
-          <div className={styles.guaranteeTag}>TRANSPARANSI DATA · ZERO-RISK CONVICTION · LIMIT 5 SLOT/BULAN</div>
+          <div className={styles.guaranteeTag}>TRANSPARAN · TERUKUR · TERBATAS 5 CLIENT BULAN INI</div>
 
           <h3 className={styles.guaranteeMainText}>
-            Komitmen Nyata Tanscale untuk Pertumbuhan Travel Agency Anda
+            Komitmenku Buat Bisnis Travel Kamu
           </h3>
 
           <div className={styles.conditionsList}>
@@ -69,7 +69,7 @@ export default function TestimonialsSection() {
 
           <div style={{ marginTop: 28 }}>
             <Link href="/contact" className="btn-cta-blue">
-              <span>Amankan 1 dari 5 Slot Bulan Ini</span>
+              <span>Amankan Slot Bulan Ini</span>
               <ArrowRight size={17} />
             </Link>
           </div>
@@ -83,7 +83,7 @@ export default function TestimonialsSection() {
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5, delay: 0.25 }}
         >
-          Kalau Anda serius ingin mendatangkan customer dan jamaah baru tanpa harus menunggu berbulan-bulan, jangan banyak mikir. Amankan slot agensi Anda sekarang sebelum kuota 5 partner bulan ini penuh.
+          Kalau kamu mau datangkan customer travel lewat alur yang jelas dan terukur, amankan slot kamu sebelum kuota 5 client bulan ini penuh.
         </motion.p>
       </div>
     </section>
