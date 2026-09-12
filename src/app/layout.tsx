@@ -6,7 +6,7 @@ import "@/styles/globals.css";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600"],
   display: "swap",
   variable: "--font-opensans",
 });
@@ -52,12 +52,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon-tanscale.svg" type="image/svg+xml" />
         <link rel="shortcut icon" href="/favicon-tanscale.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/favicon-tanscale.svg" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-          rel="stylesheet"
-        />
+        {/* Preconnect to Cloudinary for instant video asset delivery */}
+        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
       </head>
 
       <body className={openSans.className}>

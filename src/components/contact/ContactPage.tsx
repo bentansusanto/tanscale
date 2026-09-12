@@ -66,8 +66,22 @@ function ContactForm() {
 
   useEffect(() => {
     const waParam = searchParams.get("wa");
+    const planParam = searchParams.get("plan");
+
     if (waParam) {
       setForm((prev) => ({ ...prev, whatsapp: waParam }));
+    }
+
+    if (planParam === "ads") {
+      setForm((prev) => ({
+        ...prev,
+        message: "Saya sudah punya website, ingin konsultasi Audit Website & Kelola Iklan Meta (Rp 3,5 Juta / 1 Bulan)",
+      }));
+    } else if (planParam === "flagship") {
+      setForm((prev) => ({
+        ...prev,
+        message: "Ingin konsultasi Paket Lengkap Website Baru + Setup Iklan Meta Gratis (Rp 6,5 Juta)",
+      }));
     }
   }, [searchParams]);
 
@@ -92,6 +106,12 @@ function ContactForm() {
     setLoading(false);
     setSubmitted(true);
 
+    const isAdsPlan = searchParams.get("plan") === "ads" || form.message.includes("3,5") || form.message.includes("2,5");
+    const planName = isAdsPlan
+      ? "Audit Website & Kelola Iklan Meta (Rp 3,5 Juta / 1 Bulan)"
+      : "Paket Lengkap Website Baru + Setup Iklan Meta Gratis (Rp 6,5 Juta)";
+    const planValue = isAdsPlan ? 3500000 : 6500000;
+
     // Fire Meta Pixel & Conversions API (CAPI) Lead event with hashed user data
     trackMetaEvent("Lead", {
       userData: {
@@ -100,13 +120,13 @@ function ContactForm() {
         email: form.email,
       },
       customData: {
-        content_name: form.service || "Konsultasi Travel Agency 6,5 Juta",
-        value: 6500000,
+        content_name: form.service || planName,
+        value: planValue,
         currency: "IDR",
       },
     });
 
-    const payload = `Halo Tim Senior Consultant Tanscale, saya pemilik biro perjalanan dan ingin konsultasi paket Website Flagship + Setup Meta Ads Gratis (5 Slot/Bulan):
+    const payload = `Halo Tim Senior Consultant Tanscale, saya pemilik biro perjalanan dan ingin konsultasi ${planName}:
 
 📋 DATA PENDAFTAR:
 • Nama Agensi: ${form.agencyName}
@@ -115,9 +135,9 @@ function ContactForm() {
 • Email Bisnis: ${form.email}
 • Fokus Layanan/Rute: ${form.service || "Belum dipilih"}
 • Omset Saat Ini: ${form.revenue || "Belum dipilih"}
-• Kendala Utama: ${form.message || "Ingin bikin website + pasang iklan Meta Ads cepat closing"}
+• Rencana / Kebutuhan: ${form.message || "Ingin cepat closing dengan strategi digital"}
 
-Mohon konfirmasi ketersediaan kuota dari 5 slot bulan ini. Terima kasih.`;
+Mohon informasi ketersediaan slot bulan ini. Terima kasih.`;
 
     window.open(`https://wa.me/6281234567890?text=${encodeURIComponent(payload)}`, "_blank");
   };

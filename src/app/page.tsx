@@ -14,25 +14,31 @@ export default function HomePage() {
     <>
       <Navbar />
       <main>
-        {/* Seksi 1: Hero (Conviction di Awal + Konsol Perhitungan Matematis SEO) */}
+        {/* Seksi 1: Hero (Conviction di Awal) */}
         <HeroSection />
 
-        {/* Seksi 2: Problem (Diagnostik 5 Titik Kebocoran Nyata Travel Agency) */}
-        <PainPointsSection />
-
-        {/* Seksi 3: Solusi Berupa Analisa Secara Mendalam (Perhitungan Matematis SEO) */}
-        <MetricsSection />
-
-        {/* Seksi 4: Apa yang Kita Lakukan (Cetak Biru Eksekusi 40 Hari) */}
-        <HowItWorksSection />
-
-        {/* Seksi 5: Package (Investasi All-In Rp 6.500.000) */}
-        <ServicesSection />
-
-        {/* Seksi 6: Meyakinkan Calon Klien Kembali (Garansi + FAQ + Final Consultation Form) */}
-        <GuaranteeSection />
-        <FaqSection />
-        <CtaSection />
+        {/* Below-the-fold sections dengan deferred rendering untuk kecepatan buka instan */}
+        <div className="section-deferred">
+          <PainPointsSection />
+        </div>
+        <div className="section-deferred">
+          <MetricsSection />
+        </div>
+        <div className="section-deferred">
+          <HowItWorksSection />
+        </div>
+        <div className="section-deferred">
+          <ServicesSection />
+        </div>
+        <div className="section-deferred">
+          <GuaranteeSection />
+        </div>
+        <div className="section-deferred">
+          <FaqSection />
+        </div>
+        <div className="section-deferred">
+          <CtaSection />
+        </div>
       </main>
       <Footer />
     </>

@@ -108,11 +108,19 @@ export default function HeroSection() {
               playsInline
               controls
               preload="metadata"
+              poster="https://res.cloudinary.com/de5vi67vo/video/upload/so_0,q_auto,f_auto,w_480/v1789200663/video-landingpage-test-01_tlotic.jpg"
             >
+              {/* High-speed optimized stream (Auto WebM / Compressed MP4) */}
+              <source
+                src="https://res.cloudinary.com/de5vi67vo/video/upload/q_auto,f_auto,w_480/v1789200663/video-landingpage-test-01_tlotic.mp4"
+                type="video/mp4"
+              />
+              {/* Direct MP4 Fallback */}
               <source
                 src="https://res.cloudinary.com/de5vi67vo/video/upload/v1789200663/video-landingpage-test-01_tlotic.mp4"
                 type="video/mp4"
               />
+              {/* Direct MOV Fallback */}
               <source
                 src="https://res.cloudinary.com/de5vi67vo/video/upload/v1789200663/video-landingpage-test-01_tlotic.mov"
                 type="video/quicktime"
