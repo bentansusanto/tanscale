@@ -3,8 +3,14 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { AlertOctagon, TrendingDown, Clock, BarChart3, Database, ArrowRight, AlertCircle } from "lucide-react";
-
+import { trackMetaEvent } from "@/lib/metaPixel";
 import styles from "./PainPointsSection.module.css";
+
+const WA_PHONE = "6288277450792";
+const waProblemMessage = encodeURIComponent(
+  "Halo Tanscale, aku pemilik bisnis travel dan mau konsultasi perbaikan iklan & website travel aku."
+);
+const waProblemUrl = `https://wa.me/${WA_PHONE}?text=${waProblemMessage}`;
 
 const problems = [
   {
@@ -121,10 +127,20 @@ export default function PainPointsSection() {
               Aku bantu audit alur iklan kamu, dari materi, targeting, sampai website, terus kita perbaiki bareng. Slot bulan ini terbatas 5.
             </p>
           </div>
-          <Link href="/contact" className="btn-cta-blue">
+          <a
+            href={waProblemUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-cta-blue"
+            onClick={() =>
+              trackMetaEvent("Contact", {
+                customData: { content_name: "Pain Points Section WhatsApp CTA" },
+              })
+            }
+          >
             <span>Konsultasi Gratis Sekarang</span>
             <ArrowRight size={17} />
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

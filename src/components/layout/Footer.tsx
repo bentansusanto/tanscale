@@ -1,8 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
+import { trackMetaEvent } from "@/lib/metaPixel";
 import styles from "./Footer.module.css";
 
+
+const WA_PHONE = "6288277450792";
+const waFooterMessage = encodeURIComponent(
+  "Halo Tanscale, aku pemilik bisnis travel dan ingin konsultasi pembuatan website & iklan Meta Ads (5 Slot Bulan Ini)."
+);
+const waFooterUrl = `https://wa.me/${WA_PHONE}?text=${waFooterMessage}`;
 
 const footerLinks = {
   nav: [
@@ -14,17 +23,12 @@ const footerLinks = {
   support: [
     { href: "/#garansi", label: "Garansi" },
     { href: "/#faq", label: "FAQ" },
-    { href: "/contact", label: "Konsultasi Gratis" },
+    { href: waFooterUrl, label: "Konsultasi Gratis", isExternal: true },
   ],
 };
 
-
-
 export default function Footer() {
-  const waMessage = encodeURIComponent(
-    "Halo Tanscale, aku pemilik bisnis travel dan ingin konsultasi pembuatan website & iklan Meta Ads (5 Slot Bulan Ini)."
-  );
-  const waUrl = `https://wa.me/6288277450792?text=${waMessage}`;
+  const waUrl = waFooterUrl;
 
   return (
     <footer className={styles.footer}>
@@ -51,7 +55,17 @@ export default function Footer() {
               Bantu bisnis travel mendatangkan calon customer tertarget lewat kombinasi website teroptimasi dan iklan Meta Ads.
             </p>
             <div className={styles.contactList}>
-              <a href={waUrl} target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
+              <a
+                href={waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.contactItem}
+                onClick={() =>
+                  trackMetaEvent("Contact", {
+                    customData: { content_name: "Footer WhatsApp Contact Link" },
+                  })
+                }
+              >
                 <MessageCircle size={15} color="#10B981" /> WhatsApp: +62 882 7745 0792
               </a>
               <a href="mailto:bennytansusanto@gmail.com" className={styles.contactItem}>
@@ -81,7 +95,23 @@ export default function Footer() {
             <ul className={styles.linkList}>
               {footerLinks.support.map((l) => (
                 <li key={l.label}>
-                  <Link href={l.href} className={styles.footerLink}>{l.label}</Link>
+                  {l.isExternal ? (
+                    <a
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.footerLink}
+                      onClick={() =>
+                        trackMetaEvent("Contact", {
+                          customData: { content_name: "Footer Support WhatsApp Link" },
+                        })
+                      }
+                    >
+                      {l.label}
+                    </a>
+                  ) : (
+                    <Link href={l.href} className={styles.footerLink}>{l.label}</Link>
+                  )}
                 </li>
               ))}
             </ul>

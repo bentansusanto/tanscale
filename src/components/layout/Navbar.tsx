@@ -5,7 +5,14 @@ import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
+import { trackMetaEvent } from "@/lib/metaPixel";
 import styles from "./Navbar.module.css";
+
+const WA_PHONE = "6288277450792";
+const waNavbarMessage = encodeURIComponent(
+  "Halo Tanscale, aku pemilik bisnis travel dan mau konsultasi pembuatan website & iklan Meta Ads."
+);
+const waNavbarUrl = `https://wa.me/${WA_PHONE}?text=${waNavbarMessage}`;
 
 const navLinks = [
   { id: "masalah", href: "/#masalah", label: "Masalah" },
@@ -133,10 +140,20 @@ export default function Navbar() {
 
           {/* Action CTA */}
           <div className={styles.navActions}>
-            <Link href="/contact" className={styles.ctaButton}>
+            <a
+              href={waNavbarUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.ctaButton}
+              onClick={() =>
+                trackMetaEvent("Contact", {
+                  customData: { content_name: "Navbar WhatsApp CTA" },
+                })
+              }
+            >
               <span>Konsultasi Gratis</span>
               <ArrowRight size={14} />
-            </Link>
+            </a>
             <button
               className={styles.burgerButton}
               onClick={() => setMobileOpen((prev) => !prev)}
@@ -178,14 +195,21 @@ export default function Navbar() {
                     </Link>
                   );
                 })}
-                <Link
-                  href="/contact"
+                <a
+                  href={waNavbarUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={styles.mobileCtaBtn}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={() => {
+                    setMobileOpen(false);
+                    trackMetaEvent("Contact", {
+                      customData: { content_name: "Mobile Drawer WhatsApp CTA" },
+                    });
+                  }}
                 >
                   <span>Mulai Konsultasi Gratis</span>
                   <ArrowRight size={16} />
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>

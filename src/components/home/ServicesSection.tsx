@@ -1,9 +1,17 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { Sparkles, ArrowRight, ShieldCheck, Check } from "lucide-react";
+import { trackMetaEvent } from "@/lib/metaPixel";
 import styles from "./ServicesSection.module.css";
+
+const WA_PHONE = "6288277450792";
+const waFlagshipMessage = encodeURIComponent(
+  "Halo Tanscale, aku tertarik dengan Paket Website Baru + Setup Iklan Meta (Rp 6,5 Juta). Mau konsultasi dan amankan slot bulan ini."
+);
+const waAdsMessage = encodeURIComponent(
+  "Halo Tanscale, aku sudah punya website dan tertarik dengan Paket Audit Website & Kelola Iklan Meta (Rp 3,5 Juta). Mau konsultasi dan amankan slot bulan ini."
+);
 
 const packages = [
   {
@@ -27,7 +35,7 @@ const packages = [
       "Dipantau & didampingi sampai closing pertama",
     ],
     ctaText: "Amankan Slot Sekarang",
-    ctaLink: "/contact?plan=flagship",
+    ctaLink: `https://wa.me/${WA_PHONE}?text=${waFlagshipMessage}`,
     guaranteeText: "Slot terbatas 5 travel bulan ini",
     subNote: "*min budget iklan 1 juta - 1,5 juta",
     isBlueCheck: false,
@@ -53,7 +61,7 @@ const packages = [
       "Laporan performa mingguan & evaluasi hasil",
     ],
     ctaText: "Pilih Kelola Iklan (Rp 3,5 Juta)",
-    ctaLink: "/contact?plan=ads",
+    ctaLink: `https://wa.me/${WA_PHONE}?text=${waAdsMessage}`,
     guaranteeText: "Saldo iklan fleksibel, bayar langsung ke Meta",
     subNote: "*min budget iklan 1 juta - 1,5 juta",
     isBlueCheck: true,
@@ -132,13 +140,24 @@ export default function ServicesSection() {
                 ))}
               </div>
 
-              <Link
+              <a
                 href={pkg.ctaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() =>
+                  trackMetaEvent("Contact", {
+                    customData: {
+                      content_name: `Pricing WhatsApp CTA ${pkg.title}`,
+                      value: pkg.id === "flagship" ? 6500000 : 3500000,
+                      currency: "IDR",
+                    },
+                  })
+                }
                 className={`${styles.pricingCtaBtn} ${!pkg.isFeatured ? styles.pricingCtaBtnSecondary : ""}`}
               >
                 <span>{pkg.ctaText}</span>
                 <ArrowRight size={18} className={styles.btnArrow} />
-              </Link>
+              </a>
 
               <div
                 className={`${styles.guaranteeTagWrap} ${pkg.isBlueCheck ? styles.guaranteeTagBlue : ""}`}

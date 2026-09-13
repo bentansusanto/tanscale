@@ -8,7 +8,14 @@ import {
   Volume2,
   VolumeX,
 } from "lucide-react";
+import { trackMetaEvent } from "@/lib/metaPixel";
 import styles from "./HeroSection.module.css";
+
+const WA_PHONE = "6288277450792";
+const waHeroMessage = encodeURIComponent(
+  "Halo Tanscale, aku pemilik bisnis travel dan mau konsultasi cara mendatangkan customer dari iklan Meta Ads ke website."
+);
+const waHeroUrl = `https://wa.me/${WA_PHONE}?text=${waHeroMessage}`;
 
 export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -126,10 +133,20 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Link href="/contact" className="btn-cta-blue">
+          <a
+            href={waHeroUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-cta-blue"
+            onClick={() =>
+              trackMetaEvent("Contact", {
+                customData: { content_name: "Hero Section WhatsApp CTA" },
+              })
+            }
+          >
             <span>Amankan Slot Bulan Ini</span>
             <ArrowRight size={17} />
-          </Link>
+          </a>
           <a href="#package" className="btn-cta-secondary">
             <span>Lihat Pilihan Paket &amp; Biaya</span>
           </a>

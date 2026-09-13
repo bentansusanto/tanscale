@@ -1,9 +1,15 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
+import { trackMetaEvent } from "@/lib/metaPixel";
 import styles from "./TestimonialsSection.module.css";
+
+const WA_PHONE = "6288277450792";
+const waGuaranteeMessage = encodeURIComponent(
+  "Halo Tanscale, aku mau amankan slot website & iklan Meta travel bulan ini."
+);
+const waGuaranteeUrl = `https://wa.me/${WA_PHONE}?text=${waGuaranteeMessage}`;
 
 const conditions = [
   "Setup Iklan Meta Gratis: Nggak ada biaya jasa setting iklan. Budget saldo iklan kamu bayar langsung ke Meta.",
@@ -68,10 +74,20 @@ export default function TestimonialsSection() {
           </div>
 
           <div style={{ marginTop: 28 }}>
-            <Link href="/contact" className="btn-cta-blue">
+            <a
+              href={waGuaranteeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cta-blue"
+              onClick={() =>
+                trackMetaEvent("Contact", {
+                  customData: { content_name: "Guarantee Section WhatsApp CTA" },
+                })
+              }
+            >
               <span>Amankan Slot Bulan Ini</span>
               <ArrowRight size={17} />
-            </Link>
+            </a>
           </div>
         </motion.div>
 

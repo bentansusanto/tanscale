@@ -3,7 +3,14 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { MonitorSmartphone, Globe2, Bot, ShieldCheck, ArrowRight, CheckCircle, Sparkles } from "lucide-react";
+import { trackMetaEvent } from "@/lib/metaPixel";
 import styles from "./HowItWorksSection.module.css";
+
+const WA_PHONE = "6288277450792";
+const waHowItWorksMessage = encodeURIComponent(
+  "Halo Tanscale, aku mau tanya alur kerja dan amankan slot website & iklan Meta travel bulan ini."
+);
+const waHowItWorksUrl = `https://wa.me/${WA_PHONE}?text=${waHowItWorksMessage}`;
 
 const methodologies = [
   {
@@ -114,10 +121,21 @@ export default function HowItWorksSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <p className={styles.closingP}>Semua terukur. Kamu tahu iklan kamu lagi ngapain, dan hasilnya kelihatan.</p>
-          <Link href="/contact" className="btn-cta-blue" style={{ marginTop: 18 }}>
+          <a
+            href={waHowItWorksUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-cta-blue"
+            style={{ marginTop: 18 }}
+            onClick={() =>
+              trackMetaEvent("Contact", {
+                customData: { content_name: "How It Works WhatsApp CTA" },
+              })
+            }
+          >
             <span>Amankan Slot Bulan Ini</span>
             <ArrowRight size={17} />
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>
