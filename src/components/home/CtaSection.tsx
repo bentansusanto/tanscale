@@ -35,7 +35,7 @@ export default function CtaSection() {
   const handleWaClick = () => {
     trackMetaEvent("Contact", {
       customData: {
-        content_name: "Bottom CTA Direct WhatsApp",
+        content_name: "Footer Konsultasi Gratis",
         content_category: "Direct WhatsApp",
       },
     });

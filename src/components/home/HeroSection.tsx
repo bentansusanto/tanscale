@@ -140,7 +140,7 @@ export default function HeroSection() {
             className="btn-cta-blue"
             onClick={() =>
               trackMetaEvent("Contact", {
-                customData: { content_name: "Hero Section WhatsApp CTA" },
+                customData: { content_name: "Hero Konsultasi Gratis" },
               })
             }
           >

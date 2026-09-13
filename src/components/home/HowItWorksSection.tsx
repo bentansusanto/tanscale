@@ -129,7 +129,7 @@ export default function HowItWorksSection() {
             style={{ marginTop: 18 }}
             onClick={() =>
               trackMetaEvent("Contact", {
-                customData: { content_name: "How It Works WhatsApp CTA" },
+                customData: { content_name: "Alur Kerja Konsultasi Gratis" },
               })
             }
           >

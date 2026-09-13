@@ -134,7 +134,7 @@ export default function PainPointsSection() {
             className="btn-cta-blue"
             onClick={() =>
               trackMetaEvent("Contact", {
-                customData: { content_name: "Pain Points Section WhatsApp CTA" },
+                customData: { content_name: "Solusi Masalah Konsultasi Gratis" },
               })
             }
           >

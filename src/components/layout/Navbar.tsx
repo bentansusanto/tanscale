@@ -147,7 +147,7 @@ export default function Navbar() {
               className={styles.ctaButton}
               onClick={() =>
                 trackMetaEvent("Contact", {
-                  customData: { content_name: "Navbar WhatsApp CTA" },
+                  customData: { content_name: "Nav Konsultasi Gratis" },
                 })
               }
             >
@@ -203,7 +203,7 @@ export default function Navbar() {
                   onClick={() => {
                     setMobileOpen(false);
                     trackMetaEvent("Contact", {
-                      customData: { content_name: "Mobile Drawer WhatsApp CTA" },
+                      customData: { content_name: "Nav Konsultasi Gratis" },
                     });
                   }}
                 >

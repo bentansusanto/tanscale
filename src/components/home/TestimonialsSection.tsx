@@ -81,7 +81,7 @@ export default function TestimonialsSection() {
               className="btn-cta-blue"
               onClick={() =>
                 trackMetaEvent("Contact", {
-                  customData: { content_name: "Guarantee Section WhatsApp CTA" },
+                  customData: { content_name: "Jaminan Konsultasi Gratis" },
                 })
               }
             >

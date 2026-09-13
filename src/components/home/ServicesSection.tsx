@@ -147,7 +147,8 @@ export default function ServicesSection() {
                 onClick={() =>
                   trackMetaEvent("Contact", {
                     customData: {
-                      content_name: `Pricing WhatsApp CTA ${pkg.title}`,
+                      content_name: `Paket ${pkg.title}`,
+                      content_category: "Pilihan Paket",
                       value: pkg.id === "flagship" ? 6500000 : 3500000,
                       currency: "IDR",
                     },

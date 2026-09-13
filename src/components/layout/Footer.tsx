@@ -62,7 +62,7 @@ export default function Footer() {
                 className={styles.contactItem}
                 onClick={() =>
                   trackMetaEvent("Contact", {
-                    customData: { content_name: "Footer WhatsApp Contact Link" },
+                    customData: { content_name: "Footer Konsultasi Gratis" },
                   })
                 }
               >
@@ -103,7 +103,7 @@ export default function Footer() {
                       className={styles.footerLink}
                       onClick={() =>
                         trackMetaEvent("Contact", {
-                          customData: { content_name: "Footer Support WhatsApp Link" },
+                          customData: { content_name: "Footer Konsultasi Gratis" },
                         })
                       }
                     >
