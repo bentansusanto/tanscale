@@ -18,6 +18,7 @@ const navLinks = [
   { id: "masalah", href: "/#masalah", label: "Masalah" },
   { id: "analisa", href: "/#analisa", label: "Solusi" },
   { id: "apa-yang-kami-lakukan", href: "/#apa-yang-kami-lakukan", label: "Cara Kerja" },
+  { id: "demo-template", href: "/#demo-template", label: "Portofolio" },
   { id: "package", href: "/#package", label: "Paket & Biaya" },
   { id: "garansi", href: "/#garansi", label: "Garansi" },
   { id: "faq", href: "/#faq", label: "FAQ" },

@@ -4,6 +4,7 @@ import HeroSection from "@/components/home/HeroSection";
 import PainPointsSection from "@/components/home/PainPointsSection";
 import MetricsSection from "@/components/home/MetricsSection";
 import HowItWorksSection from "@/components/home/HowItWorksSection";
+import TemplateDemoSection from "@/components/home/TemplateDemoSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import GuaranteeSection from "@/components/home/TestimonialsSection";
 import FaqSection from "@/components/home/FaqSection";
@@ -26,6 +27,9 @@ export default function HomePage() {
         </div>
         <div className="section-deferred">
           <HowItWorksSection />
+        </div>
+        <div className="section-deferred">
+          <TemplateDemoSection />
         </div>
         <div className="section-deferred">
           <ServicesSection />

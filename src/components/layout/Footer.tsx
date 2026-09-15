@@ -18,6 +18,7 @@ const footerLinks = {
     { href: "/#masalah", label: "Masalah" },
     { href: "/#analisa", label: "Solusi" },
     { href: "/#apa-yang-kami-lakukan", label: "Cara Kerja" },
+    { href: "/#demo-template", label: "Portofolio" },
     { href: "/#package", label: "Paket & Biaya" },
   ],
   support: [
