@@ -11,8 +11,8 @@ const faqs = [
     a: "Belum. Biaya paket adalah untuk jasa pembuatan website atau audit & kelola iklan. Saldo budget iklan (minimal 1 juta - 1,5 juta) kamu bayar langsung ke Meta via kartu debit/kredit tanpa markup sepeserpun.",
   },
   {
-    q: "Apa bedanya paket Rp 6,5 Juta dan Rp 3,5 Juta?",
-    a: "Paket Rp 6,5 Juta (sekali bayar) untuk kamu yang belum punya website atau ingin ganti website lama dengan yang baru, sudah gratis jasa setup iklan Meta. Paket Rp 3,5 Juta untuk kamu yang sudah punya website dan butuh audit alur serta pengelolaan iklan intensif selama 1 bulan.",
+    q: "Apa bedanya paket Rp 5 Juta dan Rp 2,5 Juta?",
+    a: "Paket Rp 5 Juta (sekali bayar) untuk kamu yang belum punya website atau ingin ganti website lama dengan yang baru, sudah gratis jasa setup iklan Meta. Paket Rp 2,5 Juta untuk kamu yang sudah punya website dan butuh audit alur serta pengelolaan iklan intensif selama 1 bulan.",
   },
   {
     q: "Materi iklan apa saja yang perlu aku siapkan?",

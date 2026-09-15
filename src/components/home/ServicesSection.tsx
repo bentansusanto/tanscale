@@ -7,10 +7,10 @@ import styles from "./ServicesSection.module.css";
 
 const WA_PHONE = "6288277450792";
 const waFlagshipMessage = encodeURIComponent(
-  "Halo Tanscale, aku tertarik dengan Paket Website Baru + Setup Iklan Meta (Rp 6,5 Juta). Mau konsultasi dan amankan slot bulan ini."
+  "Halo Tanscale, aku tertarik dengan Paket Website Baru + Setup Iklan Meta (Rp 5 Juta). Mau konsultasi dan amankan slot bulan ini."
 );
 const waAdsMessage = encodeURIComponent(
-  "Halo Tanscale, aku sudah punya website dan tertarik dengan Paket Audit Website & Kelola Iklan Meta (Rp 3,5 Juta). Mau konsultasi dan amankan slot bulan ini."
+  "Halo Tanscale, aku sudah punya website dan tertarik dengan Paket Audit Website & Kelola Iklan Meta (Rp 2,5 Juta). Mau konsultasi dan amankan slot bulan ini."
 );
 
 const packages = [
@@ -22,14 +22,13 @@ const packages = [
     targetAudience:
       "Cocok kalau kamu belum punya website, atau website lama lemot dan sepi.",
     currency: "Rp",
-    price: "6.500.000",
+    price: "5.000.000",
     billingCycle: "Sekali Bayar",
     note: "Bayar sekali, website jadi milik kamu selamanya. Jasa setup iklan Meta gratis.",
     features: [
       "Website travel modern & cepat dibuka di HP",
       "Gratis domain .com & cloud hosting 1 tahun",
-      "Tombol WhatsApp otomatis langsung ke paket tour",
-      "Gratis jasa setup iklan Facebook & Instagram",
+      "Gratis jasa setup iklan meta ads",
       "Edit foto & video HP kamu jadi materi iklan",
       "Pasang Meta Pixel & event tracking konversi",
       "Dipantau & didampingi sampai closing pertama",
@@ -48,7 +47,7 @@ const packages = [
     targetAudience:
       "Cocok kalau kamu sudah punya website, tapi sepi pengunjung atau iklan belum closing.",
     currency: "Rp",
-    price: "3.500.000",
+    price: "2.500.000",
     billingCycle: "(Pengerjaan 1 Bulan)",
     note: "Kelola iklan intensif 1 bulan penuh. Saldo iklan dibayar langsung ke Meta.",
     features: [
@@ -60,7 +59,7 @@ const packages = [
       "Pantau & optimasi iklan harian selama 1 bulan",
       "Laporan performa mingguan & evaluasi hasil",
     ],
-    ctaText: "Pilih Kelola Iklan (Rp 3,5 Juta)",
+    ctaText: "Pilih Kelola Iklan (Rp 2,5 Juta)",
     ctaLink: `https://wa.me/${WA_PHONE}?text=${waAdsMessage}`,
     guaranteeText: "Saldo iklan fleksibel, bayar langsung ke Meta",
     subNote: "*min budget iklan 1 juta - 1,5 juta",

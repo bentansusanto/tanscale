@@ -44,11 +44,11 @@ const contactInfo = [
 const packageOptions = [
   {
     id: "flagship",
-    name: "Website Baru + Setup Iklan Meta (Rp 6.500.000)",
+    name: "Website Baru + Setup Iklan Meta (Rp 5.000.000)",
   },
   {
     id: "ads",
-    name: "Audit Website & Kelola Iklan Meta (Rp 3.500.000 / 1 Bulan)",
+    name: "Audit Website & Kelola Iklan Meta (Rp 2.500.000 / 1 Bulan)",
   },
   {
     id: "consultation",
@@ -81,14 +81,14 @@ function ContactForm() {
     if (planParam === "ads") {
       setForm((prev) => ({
         ...prev,
-        service: "Audit Website & Kelola Iklan Meta (Rp 3.500.000 / 1 Bulan)",
-        message: prev.message || "Aku sudah punya website, mau konsultasi Audit Website & Kelola Iklan Meta (Rp 3,5 Juta / 1 Bulan)",
+        service: "Audit Website & Kelola Iklan Meta (Rp 2.500.000 / 1 Bulan)",
+        message: prev.message || "Aku sudah punya website, mau konsultasi Audit Website & Kelola Iklan Meta (Rp 2,5 Juta / 1 Bulan)",
       }));
     } else if (planParam === "flagship") {
       setForm((prev) => ({
         ...prev,
-        service: "Website Baru + Setup Iklan Meta (Rp 6.500.000)",
-        message: prev.message || "Aku mau konsultasi Website Baru + Setup Iklan Meta (Rp 6,5 Juta)",
+        service: "Website Baru + Setup Iklan Meta (Rp 5.000.000)",
+        message: prev.message || "Aku mau konsultasi Website Baru + Setup Iklan Meta (Rp 5 Juta)",
       }));
     }
   }, [searchParams]);
@@ -114,9 +114,9 @@ function ContactForm() {
     setLoading(false);
     setSubmitted(true);
 
-    const isAdsPlan = form.service.includes("3.500.000") || searchParams.get("plan") === "ads";
-    const planName = form.service || "Website Baru + Setup Iklan Meta (Rp 6.500.000)";
-    const planValue = isAdsPlan ? 3500000 : 6500000;
+    const isAdsPlan = form.service.includes("2.500.000") || searchParams.get("plan") === "ads";
+    const planName = form.service || "Website Baru + Setup Iklan Meta (Rp 5.000.000)";
+    const planValue = isAdsPlan ? 2500000 : 5000000;
 
     // Fire Meta Pixel & Conversions API (CAPI) Lead event with hashed user data
     trackMetaEvent("Lead", {
